@@ -1,38 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with `create-next-app` (with some minor adaptations for Wasmer).
+This is a simple [PHP](https://php.org/) application starter
 
 ## Getting Started
 
-First, run the development server:
+Modify the logic of your the PHP application in the `app/index.php` file.
 
-```bash
-npm run dev
+```console
+$ echo '<?php phpinfo() ?>' > ./app/index.php
 ```
 
-You can run the Next.js example using Wasmer (check out the [install guide](https://docs.wasmer.io/install)):
+You can run things locally with:
 
-```bash
-npm run edge:build
-wasmer run .
+```
+$ php -t app -S localhost:8080
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see your Next.js app.
+Or you can also use `wasmer run` to run it locally (check out the [Wasmer install guide](https://docs.wasmer.io/install)):
 
-## Learn More
+```console
+$ wasmer run .
+```
 
-To learn more about Next.js, take a look at the following resources:
+Open [http://localhost:8080](http://localhost:8080) with your browser to see the result.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
 ## Deploy on Wasmer Edge
 
-The easiest way to deploy your Next.js app is to use the [Wasmer Edge](https://wasmer.io/products/edge).
+The easiest way to deploy your PHP app is to use the [Wasmer Edge](https://wasmer.io/products/edge).
 
-Live example: https://nextjs-wasmer-starter.wasmer.app/
+Live example: https://test-repo-wasmer-examples.wasmer.app/
 
-First, you'll need to run `npm run edge:build`, and then, to deploy to Wasmer Edge:
+Run this commmand to deploy to Wasmer Edge:
 
 ```bash
 wasmer deploy

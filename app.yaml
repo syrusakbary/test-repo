@@ -1,4 +1,6 @@
 kind: wasmer.io/App.v0
-name: syrusakbary-test-repo
+name: test-repo
 owner: syrusakbary
 package: .
+scaling:
+  mode: single_concurrency
